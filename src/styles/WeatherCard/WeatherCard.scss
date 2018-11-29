@@ -1,0 +1,114 @@
+// variables
+$sample-font-sans-serif: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+$content-padding: 25px;
+
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width : #{$desktop}) {
+    @content;
+  }
+}
+
+%btn-primary {
+  color: #000;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: darken($color: blue, $amount: 40);
+  color: white;
+  border: 0;
+  border-radius: 0;
+}
+
+.weather-card {
+  margin-top: 10px;
+  position: relative;
+  border: solid 1px rgb(228, 224, 224);
+  height: 100%;
+
+  @include desktop {
+    border: 0;
+    margin-top: 3px;
+  }
+
+  .image {
+    //including some base styles so this shows up in the basic page, feel free to change these
+    @include desktop {
+      border-radius: 2px;
+      border: solid 1px rgb(228, 224, 224);
+    }
+    background: whitesmoke;
+    border-radius: 2px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 20rem;
+    width: 100%;
+    z-index: -1;
+  }
+  .content {
+    padding: $content-padding;
+    position: absolute;
+    top: 0;
+    //this can extend eyebrow and will be okay
+    .day-of-week {
+      font-family: $sample-font-sans-serif;
+      font-size: 25px;
+      color: darken($color: blue, $amount: 60);
+      font-weight: bold;
+    }
+
+    .country {
+      font-family: $sample-font-sans-serif;
+      font-size: 15px;
+      display: block;
+      color: black;
+    }
+    .temp-content {
+      font-family: $sample-font-sans-serif;
+      font-size: 25px;
+      display: inline-block;
+      color: black;
+      margin-top: 20px;
+      span {
+        color: blue;
+        text-shadow: 1px 1px 2px black;
+      }
+    }
+    .low {
+      margin-left: 30px;
+    }
+
+    //this can extend btn-primary and will be okay
+    .city-badge {
+      @extend %btn-primary;
+      border-radius: 15px;
+      width: 120px;
+      padding: 0.5rem 1rem;
+      position: absolute;
+      margin-left: 80px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .city-badge:focus {
+      outline: 0;
+    }
+    .weather-content {
+      margin-top: 10px;
+      font-size: 65px;
+      // color: rgb(3, 174, 231);
+      color: rgb(255, 178, 36);
+      text-shadow: 1px 1px 2px black;
+      span {
+        color: orange;
+        text-shadow: 1px 1px 2px black;
+        font-family: $sample-font-sans-serif;
+        font-size: 25px;
+        padding: 10px;
+      }
+    }
+  }
+}

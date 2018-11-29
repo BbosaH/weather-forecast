@@ -1,0 +1,31 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0 px;
+  background: #fafafa;
+}
+
+.first-div {
+  color: red;
+}
+
+.background {
+  background-image: url("../img/sunset.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 20rem;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+@media (min-width: 840px) {
+  .background {
+    min-height: 15rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

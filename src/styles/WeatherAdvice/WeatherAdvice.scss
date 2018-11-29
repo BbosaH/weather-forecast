@@ -1,0 +1,88 @@
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width : #{$desktop}) {
+    @content;
+  }
+}
+$font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+%btn-primary {
+  color: #000;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: yellow;
+  border: 0;
+  border-radius: 0;
+}
+.advice-wrapper {
+  margin-top: 70px;
+  padding: 10px;
+  font-family: "Lucida Sans";
+  font-weight: normal;
+
+  span {
+    color: darken($color: darkblue, $amount: 60);
+    margin-top: 20px;
+    display: block;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .weather-today {
+    color: darken($color: blue, $amount: 60);
+    font-size: 30px;
+    font-family: $font;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px white;
+  }
+  .weather_desc {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    // color: darken($color: orange, $amount: 10);
+  }
+  .temp-content {
+    display: inline-block;
+  }
+  .temp {
+    font-size: 40px;
+  }
+  .low {
+    margin-left: 20px;
+  }
+  .text-p {
+    color: white;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  input {
+    margin-top: 40px;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    @include desktop {
+      margin-left: 50px;
+      width: 500px;
+    }
+  }
+  button {
+    margin-left: 10px;
+    width: 120px;
+    border: 0;
+    color: white;
+    background: darken($color: darkorange, $amount: 0);
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  button:focus {
+    outline: 0;
+  }
+}

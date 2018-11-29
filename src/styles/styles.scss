@@ -1,0 +1,32 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0 px;
+  background: rgb(250, 250, 250);
+}
+
+.first-div {
+  color: red;
+}
+$desktop: 840px;
+@mixin desktop {
+  @media (min-width : #{$desktop}) {
+    @content;
+  }
+}
+
+.background {
+  @include desktop {
+    min-height: 15rem;
+  }
+  background-image: url("../img/sunset.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 20rem;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}

@@ -1,0 +1,24 @@
+.weather-footer {
+  background: darkorange;
+  height: 100px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 20px;
+}
+
+.weather-footer .footer-links {
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 20px;
+}
+
+.weather-footer .footer-links ul li {
+  display: inline-block;
+}
+
+.weather-footer .footer-links ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 50px;
+}
+/*# sourceMappingURL=WeatherFooter.css.map */

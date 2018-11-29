@@ -1,0 +1,27 @@
+$desktop: 840px;
+@mixin desktop {
+  @media (min-width : #{$desktop}) {
+    @content;
+  }
+}
+.not-found {
+  //including some base styles so this shows up in the basic page, feel free to change these
+  @include desktop {
+    padding-left: 400px;
+  }
+  vertical-align: center;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: gray;
+  font-weight: 100;
+  font-size: 55px;
+  padding: 0px;
+  border-radius: 2px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 20rem;
+  width: 100%;
+  z-index: -1;
+}

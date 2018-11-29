@@ -1,0 +1,110 @@
+.weather-card .content .city-badge {
+  color: #000;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #000033;
+  color: white;
+  border: 0;
+  border-radius: 0;
+}
+
+.weather-card {
+  margin-top: 10px;
+  position: relative;
+  border: solid 1px #e4e0e0;
+  height: 100%;
+}
+
+@media (min-width: 840px) {
+  .weather-card {
+    border: 0;
+    margin-top: 3px;
+  }
+}
+
+.weather-card .image {
+  background: whitesmoke;
+  border-radius: 2px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 20rem;
+  width: 100%;
+  z-index: -1;
+}
+
+@media (min-width: 840px) {
+  .weather-card .image {
+    border-radius: 2px;
+    border: solid 1px #e4e0e0;
+  }
+}
+
+.weather-card .content {
+  padding: 25px;
+  position: absolute;
+  top: 0;
+}
+
+.weather-card .content .day-of-week {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+}
+
+.weather-card .content .country {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  display: block;
+  color: black;
+}
+
+.weather-card .content .temp-content {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  display: inline-block;
+  color: black;
+  margin-top: 20px;
+}
+
+.weather-card .content .temp-content span {
+  color: blue;
+  text-shadow: 1px 1px 2px black;
+}
+
+.weather-card .content .low {
+  margin-left: 30px;
+}
+
+.weather-card .content .city-badge {
+  border-radius: 15px;
+  width: 120px;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  margin-left: 80px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.weather-card .content .city-badge:focus {
+  outline: 0;
+}
+
+.weather-card .content .weather-content {
+  margin-top: 10px;
+  font-size: 65px;
+  color: #ffb224;
+  text-shadow: 1px 1px 2px black;
+}
+
+.weather-card .content .weather-content span {
+  color: orange;
+  text-shadow: 1px 1px 2px black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  padding: 10px;
+}
+/*# sourceMappingURL=WeatherCard.css.map */
