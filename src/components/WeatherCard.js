@@ -1,12 +1,6 @@
 import React from "react";
 import "../styles/WeatherCard/WeatherCard.css";
 import { FaArrowCircleUp, FaArrowCircleDown } from "react-icons/fa";
-import {
-  IoIosCloudOutline,
-  IoIosRainy,
-  IoIosSunny,
-  IoIosSnow
-} from "react-icons/io";
 import "../styles/weather-icons.min.css";
 import Proptypes from "prop-types";
 /**

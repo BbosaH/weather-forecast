@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/WeatherAdvice/WeatherAdvice.css";
-import { IoMdRainy } from "react-icons/io";
 import { FaArrowCircleUp, FaArrowCircleDown } from "react-icons/fa";
 import Proptypes from "prop-types";
 
