@@ -59,6 +59,7 @@ $desktop: 840px;
       font-size: 25px;
       color: darken($color: blue, $amount: 60);
       font-weight: bold;
+      display: inline-block;
     }
 
     .country {
@@ -88,8 +89,8 @@ $desktop: 840px;
       border-radius: 15px;
       width: 120px;
       padding: 0.5rem 1rem;
-      position: absolute;
-      margin-left: 80px;
+      display: inline-block;
+      margin-left: 20px;
       margin-top: 10px;
       font-weight: bold;
     }
