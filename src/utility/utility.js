@@ -96,7 +96,9 @@ export const processWeatherData = (
   for (let i = 0; i < threeHourWeathers.length; i++) {
     let current_forecast_object = threeHourWeathers[i];
     let weatherDateStr = current_forecast_object.dt_txt.split(" ")[0];
-    let forecast_day = new Date(current_forecast_object.dt_txt).getDay();
+    let dateString = current_forecast_object.dt_txt;
+    let d = new Date(dateString.replace(" ", "T"));
+    let forecast_day = d.getDay();
     myWeatherObj.dt = current_forecast_object.dt;
     if (weatherDateStr === todayDateStr) {
       myWeatherObj.today = true;
@@ -104,8 +106,7 @@ export const processWeatherData = (
     if (i === 0 || weatherDateStr === tracked_current_date) {
       if (myWeatherObj.date !== weatherDateStr) {
         myWeatherObj.date = weatherDateStr;
-        //myWeatherObj.myDay = dayarray[forecast_day];
-        myWeatherObj.myDay = dayarray[2];
+        myWeatherObj.myDay = dayarray[forecast_day];
       }
       if (myWeatherObj.low_temp > current_forecast_object.main.temp_min) {
         myWeatherObj.low_temp = current_forecast_object.main.temp_min;
@@ -125,8 +126,7 @@ export const processWeatherData = (
       myFiveDayWeatherArr.push(myWeatherObj);
       myWeatherObj = { ...newWeatherObj };
       myWeatherObj.date = weatherDateStr;
-      //myWeatherObj.myDay = dayarray[forecast_day];
-      myWeatherObj.myDay = dayarray[2];
+      myWeatherObj.myDay = dayarray[forecast_day];
       myWeatherObj.low_temp = current_forecast_object.main.temp_min;
       myWeatherObj.high_temp = current_forecast_object.main.temp_max;
       myWeatherObj.weather_description =
