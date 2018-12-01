@@ -11,7 +11,7 @@ import Proptypes from "prop-types";
 const WeatherCard = ({
   cityName,
   today,
-  day,
+  myDay,
   low_temp,
   high_temp,
   weather_description,
@@ -22,7 +22,9 @@ const WeatherCard = ({
       <div className="image" />
       <div className="content">
         <div>
-          <div className="day-of-week">{today ? "Today" : "sunday"}</div>
+          <div className="day-of-week">
+            {today ? "Today" : myDay + "sunday"}
+          </div>
           <button className="city-badge">{cityName}</button>
         </div>
         <span className="country">United States</span>

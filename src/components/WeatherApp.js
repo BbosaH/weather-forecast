@@ -35,7 +35,7 @@ class WeatherApp extends Component {
             dt: "",
             today: false,
             date: "",
-            day: "",
+            myDay: "",
             low_temp: "",
             high_temp: "",
             weather_description: "",
