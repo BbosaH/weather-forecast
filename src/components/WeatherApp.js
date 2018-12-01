@@ -127,7 +127,7 @@ class WeatherApp extends Component {
 }
 
 WeatherApp.propTypes = {
-  dayarray: PropTypes.array.isRequired
+  dayarray: Proptypes.array.isRequired
 };
 
 export default WeatherApp;
