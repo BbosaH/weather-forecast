@@ -1,3 +1,4 @@
+$sample-font-sans-serif: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 .header {
   background-color: darken($color: blue, $amount: 40);
   height: 70px;
@@ -13,7 +14,7 @@
   margin-left: 10px;
 }
 .header-title {
-  font-family: "Lucida Sans";
+  font-family: $sample-font-sans-serif;
   font-size: 20px;
   color: whitesmoke;
   margin-left: 20px;
