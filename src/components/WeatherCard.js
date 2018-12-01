@@ -9,7 +9,7 @@ import Proptypes from "prop-types";
  * @param {object} param0
  */
 const WeatherCard = ({
-  city,
+  cityName,
   today,
   day,
   low_temp,
@@ -22,13 +22,17 @@ const WeatherCard = ({
       <div className="image" />
       <div className="content">
         <span className="day-of-week">{today ? "Today" : day}</span>
-        <button className="city-badge">{city.name}</button>
+        <button className="city-badge">{cityName}</button>
         <span className="country">United States</span>
         <div className="temp-content">
-          <FaArrowCircleUp /> <span>{high_temp}°</span>
+          <span className="temp">
+            <FaArrowCircleUp /> <span>{high_temp}°</span>
+          </span>
         </div>
         <div className="temp-content low">
-          <FaArrowCircleDown /> <span>{low_temp}°</span>
+          <span className="temp">
+            <FaArrowCircleDown /> <span>{low_temp}°</span>
+          </span>
         </div>
         <div className="weather-content">
           <i className={"wi " + weather_icon} />{" "}

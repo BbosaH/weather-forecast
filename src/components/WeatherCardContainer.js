@@ -18,7 +18,13 @@ const WeatherCardContainer = ({ returnedData, weatherData }) => {
         return !item.today;
       })
       .map(item => {
-        return <WeatherCard key={item.dt} city={weatherData.city} {...item} />;
+        return (
+          <WeatherCard
+            key={item.dt}
+            cityName={weatherData.city.name}
+            {...item}
+          />
+        );
       });
   };
   return <div className="card-container">{renderData()}</div>;

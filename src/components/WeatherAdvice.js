@@ -7,7 +7,7 @@ import Proptypes from "prop-types";
 Component to Render Words In the top part of the app on top of sunset picture
 *Stateless component
 */
-const Words = ({ cityName, weatherToday }) => {
+export const TodaysWeather = ({ cityName, weatherToday }) => {
   return (
     <React.Fragment>
       <div className="weather-today">
@@ -25,13 +25,14 @@ const Words = ({ cityName, weatherToday }) => {
       </div>
       <div className="temp-content low">
         <span className="temp">
-          <FaArrowCircleDown /> {weatherToday.low_temp || "00"}°
+          <FaArrowCircleDown />
+          {weatherToday.low_temp || "00"}°
         </span>
       </div>
     </React.Fragment>
   );
 };
-Words.proptypes = {
+TodaysWeather.proptypes = {
   cityName: Proptypes.string.isRequired,
   weatherToday: Proptypes.object.isRequired
 };
@@ -40,7 +41,7 @@ Words.proptypes = {
  * zipcode to search weather forecast.
  * Stateless component
  */
-const SearchInput = ({ cityName, handleChange, handleClick }) => {
+export const SearchInput = ({ cityName, handleChange, handleClick }) => {
   return (
     <React.Fragment>
       <input
@@ -71,7 +72,7 @@ const WeatherAdvice = ({
 }) => {
   return (
     <div className="advice-wrapper">
-      <Words cityName={weatherCity.name} weatherToday={weatherToday} />
+      <TodaysWeather cityName={weatherCity.name} weatherToday={weatherToday} />
       <SearchInput
         cityName={cityName}
         handleChange={handleChange}
