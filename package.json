@@ -1,5 +1,5 @@
 {
-  "name": "react-webpack-starter",
+  "name": "weather-forecast",
   "version": "1.0.0",
   "description": "boilerplate for react webpack",
   "engines": {
