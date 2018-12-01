@@ -22,9 +22,7 @@ const WeatherCard = ({
       <div className="image" />
       <div className="content">
         <div>
-          <div className="day-of-week">
-            {today ? "Today" : myDay + "sunday"}
-          </div>
+          <div className="day-of-week">{today ? "Today" : myDay}</div>
           <button className="city-badge">{cityName}</button>
         </div>
         <span className="country">United States</span>
