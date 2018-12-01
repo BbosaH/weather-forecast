@@ -6,6 +6,7 @@ import WeatherAdvice from "./WeatherAdvice";
 import WeatherCardContainer from "./WeatherCardContainer";
 import WeatherFooter from "./WeatherFooter";
 import API, { API_AUTH_ID, ZIP_REGEX } from "../api/api";
+import Proptypes from "prop-types";
 import {
   formatDate,
   resetObject,
@@ -42,19 +43,6 @@ class WeatherApp extends Component {
             weather_icon: ""
           }
         ]
-      },
-      dayarray: [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      iconObj: {
-        snow: "wi-day-snow",
-        rain: "wi-day-rain"
       }
     };
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -99,7 +87,7 @@ class WeatherApp extends Component {
       let processed_data = processWeatherData(
         result,
         todayDateStr,
-        this.state.dayarray,
+        this.props.dayarray,
         resetObject()
       );
       if (!processed_data) {
@@ -137,5 +125,9 @@ class WeatherApp extends Component {
     );
   }
 }
+
+WeatherApp.propTypes = {
+  dayarray: PropTypes.array.isRequired
+};
 
 export default WeatherApp;
