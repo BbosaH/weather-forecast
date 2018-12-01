@@ -3,9 +3,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: ["babel-polyfill", "./src/index.js"],
+
   output: {
-    path: path.join(__dirname, "/dist"),
-    filename: "index_bundle.js"
+    path: __dirname,
+    filename: "./bundle.js"
   },
   module: {
     rules: [
@@ -54,7 +55,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html"
+      template: "./index.html"
     })
   ]
 };
