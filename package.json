@@ -2,6 +2,10 @@
   "name": "react-webpack-starter",
   "version": "1.0.0",
   "description": "boilerplate for react webpack",
+  "engines": {
+    "node": "10.12.0",
+    "npm": "6.4.1"
+  },
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
