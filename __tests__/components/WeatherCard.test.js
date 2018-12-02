@@ -9,7 +9,7 @@ describe("<WeatherCard/>", () => {
     weather_object = {
       cityName: "Brooklyn",
       today: true,
-      day: "Thursday",
+      myDay: "Thursday",
       low_temp: 30,
       high_temp: 45,
       weather_description: "light clouds",
@@ -22,12 +22,12 @@ describe("<WeatherCard/>", () => {
   });
   it("should render day Of the week conditionally", () => {
     let wrapper = shallow(<WeatherCard {...weather_object} />);
-    expect(wrapper.find("span.day-of-week")).toHaveLength(1);
-    expect(wrapper.find("span.day-of-week").text()).toEqual("Today");
+    expect(wrapper.find("div.day-of-week")).toHaveLength(1);
+    expect(wrapper.find("div.day-of-week").text()).toEqual("Today");
 
     weather_object.today = false;
     wrapper = shallow(<WeatherCard {...weather_object} />);
-    expect(wrapper.find("span.day-of-week").text()).toEqual("Thursday");
+    expect(wrapper.find("div.day-of-week").text()).toEqual("Thursday");
   });
   it("should render High Low Temperatures with arrows", () => {
     let wrapper = shallow(<WeatherCard {...weather_object} />);

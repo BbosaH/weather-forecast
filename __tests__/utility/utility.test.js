@@ -18,6 +18,7 @@ describe("utility_funcs", () => {
       const reset_obj = {
         today: false,
         date: "",
+        myDay:"",
         low_temp: Infinity,
         high_temp: -Infinity,
         weather_description: "",

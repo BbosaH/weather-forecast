@@ -97,9 +97,7 @@ export const processWeatherData = (
     let current_forecast_object = threeHourWeathers[i];
     let weatherDateStr = current_forecast_object.dt_txt.split(" ")[0];
     let dateString = current_forecast_object.dt_txt;
-
     let d = new Date(dateString.replace(/-/g, "/"));
-
     let forecast_day = d.getDay();
     myWeatherObj.dt = current_forecast_object.dt;
     if (weatherDateStr === todayDateStr) {
