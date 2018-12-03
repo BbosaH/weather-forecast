@@ -10,6 +10,7 @@
   "scripts": {
     "start": "node server.js",
     "heroku-postbuild": "webpack -p",
+    "build": "webpack -p",
     "test": "jest",
     "test:watch": "jest --watch"
   },

@@ -44,7 +44,7 @@ for example
 
 npm start
 
-starts webpack development server
+starts server
 
 # running Test suites
 
@@ -52,6 +52,6 @@ npm test
 
 runs jest test runner
 
-# buidling for production
+# building for production
 
-npm build
+npm run-script build
