@@ -42,16 +42,12 @@ for example
 
 # running app
 
-npm start
+steps :
 
-starts server
+1. npm run-script build #to build app
+2. npm start #starts server through server.js file at "http://localhost:8080"
 
 # running Test suites
 
 npm test
-
 runs jest test runner
-
-# building for production
-
-npm run-script build
